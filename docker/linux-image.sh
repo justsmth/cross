@@ -241,7 +241,8 @@ main() {
         "libc6:${arch}" \
         "linux-image-${kernel}:${arch}" \
         ncurses-base"${ncurses}" \
-        "zlib1g:${arch}"
+        "zlib1g:${arch}" \
+        "golang:${arch}"
 
     if [[ "${arch}" != "${dpkg_arch}" ]]; then
         apt-get -d --no-install-recommends download "${libgcc_packages[@]}"
